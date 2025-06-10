@@ -79,7 +79,7 @@ export default function ContactForm() {
             <div className="space-y-6">
               <FormField
                 control={form.control}
-                name="name"
+                name={"name" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -96,7 +96,7 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="email"
+                name={"email" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -114,7 +114,7 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="project"
+                name={"project" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -133,7 +133,7 @@ export default function ContactForm() {
             <div className="space-y-6">
               <FormField
                 control={form.control}
-                name="budget"
+                name={"budget" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
@@ -150,7 +150,7 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name="message"
+                name={"message" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
