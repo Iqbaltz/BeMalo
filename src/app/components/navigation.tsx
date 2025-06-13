@@ -75,7 +75,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <Button
               onClick={() => scrollToSection("contact")}
-              className="bg-accent hover:bg-accent/90 text-accent-foreground"
+              className="bg-accent bg-primary hover:bg-accent/90 rounded-full text-accent-foreground"
             >
               Get In Touch
             </Button>
