@@ -37,7 +37,10 @@ export default function Navigation() {
         <div className="flex justify-between items-center h-16">
           {/* Logo */}
           <div className="flex items-center">
-            <div className="flex items-center space-x-2">
+            <div
+              className="flex items-center space-x-2 cursor-pointer"
+              onClick={() => scrollToSection("hero")}
+            >
               <div className="flex justify-center items-center rounded-lg w-8 h-8 gradient-hero">
                 <span className="font-bold text-white text-sm">bM</span>
               </div>
@@ -73,12 +76,14 @@ export default function Navigation() {
 
           {/* Get In Touch Button */}
           <div className="hidden md:block">
-            <Button
-              onClick={() => scrollToSection("contact")}
-              className="bg-accent bg-primary hover:bg-accent/90 rounded-full text-accent-foreground"
-            >
-              Get In Touch
-            </Button>
+            <a href="https://wa.me/6281385267252" target="_blank">
+              <Button
+                onClick={() => scrollToSection("contact")}
+                className="bg-accent bg-primary hover:bg-accent/90 rounded-full text-accent-foreground"
+              >
+                Contact Us
+              </Button>
+            </a>
           </div>
 
           {/* Mobile menu button */}

@@ -36,7 +36,7 @@ export default function ServicesSection() {
           <h2 className="mb-6 font-bold text-foreground text-4xl md:text-5xl">
             We help to build clients their
             <br />
-            <span className="text-primary">dream projects</span>
+            <span>dream projects</span>
           </h2>
         </div>
 
@@ -44,7 +44,7 @@ export default function ServicesSection() {
           {services.map((service, index) => (
             <Card
               key={index}
-              className="group bg-card border-border rounded-2xl overflow-hidden cursor-pointer service-card"
+              className="group bg-card bg-white border-none rounded-2xl overflow-hidden cursor-pointer service-card"
             >
               <div className="relative overflow-hidden">
                 <img
@@ -54,10 +54,10 @@ export default function ServicesSection() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="mb-3 font-semibold text-foreground text-xl">
+                <h3 className="mb-3 font-semibold text-background text-xl">
                   {service.title}
                 </h3>
-                <p className="text-muted-foreground leading-relaxed">
+                <p className="text-background leading-relaxed">
                   {service.description}
                 </p>
               </CardContent>

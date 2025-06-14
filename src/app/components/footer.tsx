@@ -1,10 +1,5 @@
 import { Mail, Phone, MapPin } from "lucide-react";
-import {
-  FaFacebookF,
-  FaTwitter,
-  FaInstagram,
-  FaLinkedinIn,
-} from "react-icons/fa";
+import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
@@ -19,15 +14,17 @@ export default function Footer() {
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">contact@bemlo.com</span>
+                <span className="text-muted-foreground">hi@bemlo.com</span>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">+1 (555) 123-4567</span>
+                <span className="text-muted-foreground">+62 813-8526-7252</span>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">San Francisco, CA</span>
+                <span className="text-muted-foreground">
+                  Jakarta, Indonesia
+                </span>
               </div>
             </div>
           </div>
@@ -95,12 +92,6 @@ export default function Footer() {
               href="#"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
             >
-              <FaTwitter className="w-5 h-5" />
-            </a>
-            <a
-              href="#"
-              className="text-muted-foreground hover:text-accent transition-colors duration-200"
-            >
               <FaInstagram className="w-5 h-5" />
             </a>
             <a
@@ -111,7 +102,7 @@ export default function Footer() {
             </a>
           </div>
           <p className="text-muted-foreground text-sm">
-            © 2024 beMalo. All rights reserved.
+            © 2025 beMalo. All rights reserved.
           </p>
         </div>
       </div>

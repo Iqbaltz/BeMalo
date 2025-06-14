@@ -6,7 +6,7 @@ export default function VisionSection() {
         <h2 className="mb-6 font-bold text-4xl md:text-5xl">
           Design. Develop. Deliver.
           <br />
-          <span className="text-primary">Grow with Purpose</span>
+          <span>Grow with Purpose</span>
         </h2>
         <p className="max-w-4xl text-gray-600 text-xl leading-relaxed">
           Every great digital product begins with understanding. We focus on
