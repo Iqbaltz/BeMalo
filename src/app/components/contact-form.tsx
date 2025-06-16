@@ -27,7 +27,7 @@ export default function ContactForm() {
     defaultValues: {
       name: "",
       email: "",
-      project: "",
+      phone: "",
       budget: "",
       message: "",
     },
@@ -46,10 +46,10 @@ export default function ContactForm() {
       form.reset();
     },
     onError: (error: any) => {
+      console.log("Error sending contact message:", error);
       toast({
         title: "Error",
-        description:
-          error.message || "Failed to send message. Please try again.",
+        description: "Failed to send message. Please try again.",
         variant: "destructive",
       });
     },
@@ -114,13 +114,14 @@ export default function ContactForm() {
 
               <FormField
                 control={form.control}
-                name={"project" as never}
+                name={"phone" as never}
                 render={({ field }) => (
                   <FormItem>
                     <FormControl>
                       <Input
                         {...field}
-                        placeholder="Tell us about your project"
+                        type="tel"
+                        placeholder="Enter your phone number"
                         className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
                       />
                     </FormControl>
@@ -165,22 +166,22 @@ export default function ContactForm() {
                   </FormItem>
                 )}
               />
-
-              <Button
-                type="submit"
-                disabled={contactMutation.isPending}
-                className="hover:opacity-90 px-8 py-4 w-full h-auto font-semibold text-white hover:scale-105 transition-all duration-200 gradient-cta transform"
-              >
-                {contactMutation.isPending ? (
-                  <>
-                    <Loader2 className="mr-2 w-4 h-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Send Message"
-                )}
-              </Button>
             </div>
+
+            <Button
+              type="submit"
+              disabled={contactMutation.isPending}
+              className="col-span-2 hover:opacity-90 px-8 py-4 w-full h-auto font-semibold text-white hover:scale-105 transition-all duration-200 gradient-cta transform"
+            >
+              {contactMutation.isPending ? (
+                <>
+                  <Loader2 className="mr-2 w-4 h-4 animate-spin" />
+                  Sending...
+                </>
+              ) : (
+                "Send Message"
+              )}
+            </Button>
           </form>
         </Form>
       </div>
