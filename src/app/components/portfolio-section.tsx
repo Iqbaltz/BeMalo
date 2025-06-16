@@ -24,12 +24,10 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="work" className="py-20 gradient-cta">
+    <section id="work" className="bg-primary py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
-          <p className="mb-4 font-semibold text-blue-200 text-lg">
-            OUR PORTFOLIO
-          </p>
+          <p className="mb-4 font-semibold text-lg">CREATIVE PORTFOLIO</p>
           <h2 className="mb-6 font-bold text-white text-4xl md:text-5xl">
             Recent Works
           </h2>
