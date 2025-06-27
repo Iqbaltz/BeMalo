@@ -5,6 +5,7 @@ export default function PortfolioSection() {
       description: "Brand identity and website design for a digital agency",
       image: "/images/project1.png",
       alt: "Foundasi Agency website design showcasing brand identity",
+      url: "https://foundasi-landing-page.vercel.app/",
     },
     {
       title: "SUGARBOMB Waxing & Beauty",
@@ -12,12 +13,14 @@ export default function PortfolioSection() {
         "Website design for a beauty salon specializing in waxing and eyebrow services",
       image: "/images/project2.png",
       alt: "SUGARBOMB Eyelash & Eyebrow salon website design",
+      url: "https://sugarbombwax.com/",
     },
     {
       title: "SBS Cosmetics",
       description: "Makeup products manufacturing company website",
       image: "/images/project3.png",
       alt: "SBS Cosmetics website design for makeup products",
+      url: "https://sbs-cosmetics.com/",
     },
   ];
 
@@ -38,14 +41,17 @@ export default function PortfolioSection() {
 
         <div className="gap-6 grid md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <div
+            <a
               key={index}
               className="group relative shadow-xl rounded-2xl overflow-hidden cursor-pointer portfolio-item"
+              href={project.url}
+              target="_blank"
+              rel="noopener noreferrer"
             >
               <img
                 src={project.image}
                 alt={project.alt}
-                className="w-full h-64 object-cover group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-300"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="right-6 bottom-6 left-6 absolute">
@@ -55,7 +61,7 @@ export default function PortfolioSection() {
                   <p className="text-gray-200 text-sm">{project.description}</p>
                 </div>
               </div>
-            </div>
+            </a>
           ))}
         </div>
       </div>
