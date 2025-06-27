@@ -1,7 +1,13 @@
+/* eslint-disable @next/next/no-img-element */
 "use client";
 import { useState, useEffect } from "react";
 import { Button } from "@/app/components/ui/button";
-import { Sheet, SheetContent, SheetTrigger } from "@/app/components/ui/sheet";
+import {
+  Sheet,
+  SheetContent,
+  SheetTitle,
+  SheetTrigger,
+} from "@/app/components/ui/sheet";
 import { Menu } from "lucide-react";
 
 export default function Navigation() {
@@ -38,11 +44,11 @@ export default function Navigation() {
           {/* Logo */}
           <div className="flex items-center">
             <div
-              className="flex items-center space-x-2 cursor-pointer"
+              className="flex items-center space-x-1 cursor-pointer"
               onClick={() => scrollToSection("hero")}
             >
-              <div className="flex justify-center items-center rounded-lg w-8 h-8 gradient-hero">
-                <span className="font-bold text-white text-sm">bM</span>
+              <div className="flex justify-center items-center rounded-lg w-12 h-12 gradient-hero">
+                <img src="/images/bemalo.png" alt="bemalo logo" />
               </div>
               <span className="font-semibold text-foreground text-xl">
                 beMalo
@@ -98,6 +104,7 @@ export default function Navigation() {
                 side="right"
                 className="bg-card border-border w-[300px]"
               >
+                <SheetTitle></SheetTitle>
                 <div className="flex flex-col space-y-4 mt-8">
                   <button
                     onClick={() => scrollToSection("about")}
@@ -119,7 +126,7 @@ export default function Navigation() {
                   </button>
                   <Button
                     onClick={() => scrollToSection("contact")}
-                    className="bg-accent hover:bg-accent/90 mt-4 w-full text-accent-foreground"
+                    className="mt-4 w-full text-accent-foreground"
                   >
                     Get In Touch
                   </Button>

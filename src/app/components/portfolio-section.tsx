@@ -1,25 +1,22 @@
 export default function PortfolioSection() {
   const projects = [
     {
-      title: "SaaS Dashboard",
-      description: "Analytics platform with beautiful data visualization",
-      image:
-        "https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400",
-      alt: "Modern SaaS dashboard with analytics and data visualization",
+      title: "Foundasi Agency",
+      description: "Brand identity and website design for a digital agency",
+      image: "/images/project1.png",
+      alt: "Foundasi Agency website design showcasing brand identity",
     },
     {
-      title: "E-commerce Store",
-      description: "Modern online store with seamless checkout experience",
-      image:
-        "https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400",
-      alt: "Modern e-commerce website design with product showcase",
+      title: "SUGARBOMB Eyelash & Eyebrow",
+      description: "Beauty salon website with booking system",
+      image: "/images/project2.png",
+      alt: "SUGARBOMB Eyelash & Eyebrow salon website design",
     },
     {
-      title: "Real Estate Platform",
-      description: "Property listing platform with advanced search",
-      image:
-        "https://images.unsplash.com/photo-1600596542815-ffad4c1539a9?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=400",
-      alt: "Luxury modern house representing real estate platform design",
+      title: "SBS Cosmetics",
+      description: "Makeup products manufacturing company website",
+      image: "/images/project3.png",
+      alt: "SBS Cosmetics website design for makeup products",
     },
   ];
 
