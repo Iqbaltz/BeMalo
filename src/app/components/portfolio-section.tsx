@@ -7,8 +7,9 @@ export default function PortfolioSection() {
       alt: "Foundasi Agency website design showcasing brand identity",
     },
     {
-      title: "SUGARBOMB Eyelash & Eyebrow",
-      description: "Beauty salon website with booking system",
+      title: "SUGARBOMB Waxing & Beauty",
+      description:
+        "Website design for a beauty salon specializing in waxing and eyebrow services",
       image: "/images/project2.png",
       alt: "SUGARBOMB Eyelash & Eyebrow salon website design",
     },
