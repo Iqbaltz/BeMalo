@@ -15,7 +15,7 @@ export default function Footer() {
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
                 <span className="text-muted-foreground">
-                  bemalo.id@gmail.com
+                  customer_care@bemalo.id
                 </span>
               </div>
               <div className="flex items-center space-x-3">

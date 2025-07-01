@@ -11,6 +11,8 @@
   --color-foreground: var(--foreground);
   --color-primary: #4A6CF7;
   --color-red: #F87171;
+  --color-destructive: #F87171;
+  --color-success: #22C55E;
 }
 
 @media (prefers-color-scheme: dark) {
