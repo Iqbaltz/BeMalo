@@ -7,12 +7,16 @@ async function throwIfResNotOk(res: Response) {
   }
 }
 
+const BASE_URL =
+  process.env.NEXT_PUBLIC_API_BASE_URL ??
+  (typeof window !== "undefined" ? "" : "http://localhost:3000");
+
 export async function apiRequest(
   method: string,
   url: string,
   data?: unknown | undefined
 ): Promise<Response> {
-  const res = await fetch(url, {
+  const res = await fetch(`${BASE_URL}${url}`, {
     method,
     headers: data ? { "Content-Type": "application/json" } : {},
     body: data ? JSON.stringify(data) : undefined,
