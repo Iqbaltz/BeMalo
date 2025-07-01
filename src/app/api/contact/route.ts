@@ -1,3 +1,5 @@
+// app/api/contact/route.ts
+
 import { insertContactSchema } from "@/app/shared/schema";
 import { appendToSheet } from "@/lib/googleSheet";
 import { NextRequest, NextResponse } from "next/server";
@@ -13,14 +15,14 @@ function getCORSHeaders(origin: string | null) {
   };
 }
 
-// Handle preflight OPTIONS request
+// Preflight request
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
   const headers = getCORSHeaders(origin);
-  return NextResponse.json({}, { headers });
+  return new NextResponse(null, { status: 204, headers });
 }
 
-// Handle actual POST request
+// POST request
 export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin");
   const headers = getCORSHeaders(origin);
@@ -51,10 +53,10 @@ export async function POST(req: NextRequest) {
       { message: "Message sent successfully" },
       { headers }
     );
-  } catch (error) {
-    console.error("API Error:", error);
+    // eslint-disable-next-line @typescript-eslint/no-unused-vars
+  } catch (error: unknown) {
     return NextResponse.json(
-      { message: "Failed to submit form" },
+      { message: "Server error" },
       { status: 500, headers }
     );
   }
