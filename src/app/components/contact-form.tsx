@@ -35,7 +35,11 @@ export default function ContactForm() {
 
   const contactMutation = useMutation({
     mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", "/api/contact", data);
+      const response = await apiRequest(
+        "POST",
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/contact"`,
+        data
+      );
       return response.json();
     },
     onSuccess: (data) => {

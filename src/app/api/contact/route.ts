@@ -1,17 +1,38 @@
-import { NextResponse } from "next/server";
 import { insertContactSchema } from "@/app/shared/schema";
 import { appendToSheet } from "@/lib/googleSheet";
+import { NextRequest, NextResponse } from "next/server";
 
-// POST /api/contact
-export async function POST(request: Request) {
+const allowedOrigins = ["http://localhost:3000", "https://bemalo.id"];
+
+function getCORSHeaders(origin: string | null) {
+  const isAllowed = origin && allowedOrigins.includes(origin);
+  return {
+    "Access-Control-Allow-Origin": isAllowed ? origin : "",
+    "Access-Control-Allow-Methods": "POST, OPTIONS",
+    "Access-Control-Allow-Headers": "Content-Type",
+  };
+}
+
+// Handle preflight OPTIONS request
+export async function OPTIONS(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  const headers = getCORSHeaders(origin);
+  return NextResponse.json({}, { headers });
+}
+
+// Handle actual POST request
+export async function POST(req: NextRequest) {
+  const origin = req.headers.get("origin");
+  const headers = getCORSHeaders(origin);
+
   try {
-    const body = await request.json();
-
+    const body = await req.json();
     const parsed = insertContactSchema.safeParse(body);
+
     if (!parsed.success) {
       return NextResponse.json(
-        { message: "Invalid form data", errors: parsed.error.flatten() },
-        { status: 400 }
+        { message: "Invalid input", errors: parsed.error.flatten() },
+        { status: 400, headers }
       );
     }
 
@@ -26,12 +47,15 @@ export async function POST(request: Request) {
       new Date().toISOString(),
     ]);
 
-    return NextResponse.json({ message: "Message sent successfully" });
-  } catch (error) {
-    console.error("Error saving to Google Sheet:", error);
     return NextResponse.json(
-      { message: "Internal Server Error" },
-      { status: 500 }
+      { message: "Message sent successfully" },
+      { headers }
+    );
+  } catch (error) {
+    console.error("API Error:", error);
+    return NextResponse.json(
+      { message: "Failed to submit form" },
+      { status: 500, headers }
     );
   }
 }
