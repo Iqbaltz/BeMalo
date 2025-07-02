@@ -2,9 +2,7 @@
 /* eslint-disable @typescript-eslint/no-explicit-any */
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
-import { useMutation } from "@tanstack/react-query";
 import { insertContactSchema, type InsertContact } from "@/app/shared/schema";
-import { apiRequest } from "@/lib/queryClient";
 import { Button } from "@/app/components/ui/button";
 import { Input } from "@/app/components/ui/input";
 import { Textarea } from "@/app/components/ui/textarea";
@@ -13,14 +11,15 @@ import {
   FormControl,
   FormField,
   FormItem,
-  // FormLabel,
   FormMessage,
 } from "@/app/components/ui/form";
 import { useToast } from "@/hooks/use-toast";
+import { useState } from "react";
 import { Loader2 } from "lucide-react";
 
 export default function ContactForm() {
   const { toast } = useToast();
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const form = useForm<InsertContact>({
     resolver: zodResolver(insertContactSchema),
@@ -33,30 +32,40 @@ export default function ContactForm() {
     },
   });
 
-  const contactMutation = useMutation({
-    mutationFn: async (data: InsertContact) => {
-      const response = await apiRequest("POST", `/api/contact`, data);
-      return response.json();
-    },
-    onSuccess: (data) => {
+  const onSubmit = async (data: InsertContact) => {
+    try {
+      setIsSubmitting(true);
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(data),
+      });
+
+      const result = await res.json();
+
+      if (!res.ok) {
+        throw new Error(result.message || "Something went wrong");
+      }
+
       toast({
         title: "Success!",
-        description: data.message,
+        description: result.message || "Message sent successfully!",
       });
+
       form.reset();
-    },
-    onError: (error: any) => {
-      console.log("Error sending contact message:", error);
+    } catch (error: any) {
+      console.error("Error sending contact message:", error);
       toast({
         title: "Error",
-        description: "Failed to send message. Please try again.",
+        description:
+          error.message || "Failed to send message. Please try again.",
         variant: "destructive",
       });
-    },
-  });
-
-  const onSubmit = (data: InsertContact) => {
-    contactMutation.mutate(data);
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return (
@@ -170,10 +179,10 @@ export default function ContactForm() {
 
             <Button
               type="submit"
-              disabled={contactMutation.isPending}
+              disabled={isSubmitting}
               className="col-span-2 hover:opacity-90 px-8 py-4 w-full h-auto font-semibold text-white hover:scale-105 transition-all duration-200 gradient-cta transform"
             >
-              {contactMutation.isPending ? (
+              {isSubmitting ? (
                 <>
                   <Loader2 className="mr-2 w-4 h-4 animate-spin" />
                   Sending...
