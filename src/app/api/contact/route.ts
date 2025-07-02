@@ -7,18 +7,25 @@ import { NextRequest, NextResponse } from "next/server";
 const allowedOrigins = ["http://localhost:3000", "https://bemalo.id"];
 
 function getCORSHeaders(origin: string | null) {
-  const isAllowed = origin && allowedOrigins.includes(origin);
+  if (!origin || !allowedOrigins.includes(origin)) {
+    return null;
+  }
+
   return {
-    "Access-Control-Allow-Origin": isAllowed ? origin : "",
+    "Access-Control-Allow-Origin": origin,
     "Access-Control-Allow-Methods": "POST, OPTIONS",
     "Access-Control-Allow-Headers": "Content-Type",
   };
 }
-
 // Preflight request
 export async function OPTIONS(req: NextRequest) {
   const origin = req.headers.get("origin");
   const headers = getCORSHeaders(origin);
+
+  if (!headers) {
+    return new NextResponse(null, { status: 403 });
+  }
+
   return new NextResponse(null, { status: 204, headers });
 }
 
@@ -26,6 +33,10 @@ export async function OPTIONS(req: NextRequest) {
 export async function POST(req: NextRequest) {
   const origin = req.headers.get("origin");
   const headers = getCORSHeaders(origin);
+
+  if (!headers) {
+    return NextResponse.json({ message: "Forbidden origin" }, { status: 403 });
+  }
 
   try {
     const body = await req.json();
