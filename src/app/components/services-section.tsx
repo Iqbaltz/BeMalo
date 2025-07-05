@@ -32,8 +32,10 @@ export default function ServicesSection() {
     <section id="services" className="bg-background py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
-          <p className="mb-4 font-semibold text-primary text-lg">WHAT WE DO</p>
-          <h2 className="mb-6 font-bold text-foreground text-4xl md:text-5xl">
+          <p className="mb-4 font-semibold text-primary md:text-lg">
+            WHAT WE DO
+          </p>
+          <h2 className="mb-6 font-bold text-foreground text-3xl md:text-5xl">
             We help to build clients their
             <br />
             <span>dream projects</span>
@@ -54,7 +56,7 @@ export default function ServicesSection() {
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="mb-3 font-semibold text-background text-xl">
+                <h3 className="mb-3 font-semibold text-background text-lg md:text-xl">
                   {service.title}
                 </h3>
                 <p className="text-background leading-relaxed">

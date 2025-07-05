@@ -84,7 +84,7 @@ export default function Navigation() {
           <div className="hidden md:block">
             <a href="https://wa.me/6281385267252" target="_blank">
               <Button
-                onClick={() => scrollToSection("contact")}
+                onClick={() => {}}
                 className="bg-accent bg-primary hover:bg-accent/90 rounded-full text-accent-foreground"
               >
                 Contact Us
@@ -100,36 +100,35 @@ export default function Navigation() {
                   <Menu className="w-6 h-6" />
                 </Button>
               </SheetTrigger>
-              <SheetContent
-                side="right"
-                className="bg-card border-border w-[300px]"
-              >
+              <SheetContent side="right" className="bg-card">
                 <SheetTitle></SheetTitle>
                 <div className="flex flex-col space-y-4 mt-8">
                   <button
                     onClick={() => scrollToSection("about")}
-                    className="px-3 py-2 font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
+                    className="px-3 py-2 pb-3 border-b font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
                   >
                     About Us
                   </button>
                   <button
                     onClick={() => scrollToSection("services")}
-                    className="px-3 py-2 font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
+                    className="px-3 py-2 pb-3 border-b font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
                   >
                     Services
                   </button>
                   <button
                     onClick={() => scrollToSection("work")}
-                    className="px-3 py-2 font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
+                    className="px-3 py-2 pb-3 border-b font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
                   >
                     Our Work
                   </button>
-                  <Button
-                    onClick={() => scrollToSection("contact")}
-                    className="mt-4 w-full text-accent-foreground"
-                  >
-                    Get In Touch
-                  </Button>
+                  <a href="https://wa.me/6281385267252" target="_blank">
+                    <Button
+                      onClick={() => {}}
+                      className="mt-4 w-full text-accent-foreground"
+                    >
+                      Contact Us
+                    </Button>
+                  </a>
                 </div>
               </SheetContent>
             </Sheet>

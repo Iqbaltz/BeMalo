@@ -35,13 +35,16 @@ export default function ContactForm() {
   const onSubmit = async (data: InsertContact) => {
     try {
       setIsSubmitting(true);
-      const res = await fetch("/api/contact", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(data),
-      });
+      const res = await fetch(
+        `${process.env.NEXT_PUBLIC_API_BASE_URL}/contact`,
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(data),
+        }
+      );
 
       const result = await res.json();
 
@@ -72,10 +75,10 @@ export default function ContactForm() {
     <section id="contact" className="bg-white py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <div className="mb-12 text-center">
-          <h2 className="mb-4 font-bold text-gray-900 text-4xl md:text-5xl">
+          <h2 className="mb-4 font-bold text-gray-900 text-3xl md:text-5xl">
             Got a Plan?
           </h2>
-          <p className="text-gray-600 text-xl">
+          <p className="text-gray-600 text-lg md:text-xl">
             Share your vision and we&apos;ll make it come to life.
           </p>
         </div>
@@ -85,7 +88,7 @@ export default function ContactForm() {
             onSubmit={form.handleSubmit(onSubmit)}
             className="gap-6 grid md:grid-cols-2"
           >
-            <div className="space-y-6">
+            <div className="space-y-6 col-span-2 md:col-span-1">
               <FormField
                 control={form.control}
                 name={"name" as never}
@@ -140,7 +143,7 @@ export default function ContactForm() {
               />
             </div>
 
-            <div className="space-y-6">
+            <div className="space-y-6 col-span-2 md:col-span-1">
               <FormField
                 control={form.control}
                 name={"budget" as never}

@@ -28,11 +28,11 @@ export default function PortfolioSection() {
     <section id="work" className="bg-primary py-20">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
-          <p className="mb-4 font-semibold text-lg">CREATIVE PORTFOLIO</p>
-          <h2 className="mb-6 font-bold text-white text-4xl md:text-5xl">
+          <p className="mb-4 font-semibold md:text-lg">CREATIVE PORTFOLIO</p>
+          <h2 className="mb-6 font-bold text-white text-3xl md:text-5xl">
             Recent Works
           </h2>
-          <p className="mx-auto max-w-3xl text-blue-100 text-xl">
+          <p className="mx-auto max-w-3xl text-blue-100 text-lg md:text-xl">
             These are our recent examples of packages or entire business
             websites that we built around the world and it&apos;s becoming
             better and better.

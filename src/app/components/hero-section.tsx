@@ -9,10 +9,10 @@ export default function HeroSection() {
       <div className="z-10 relative mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         {/* Content */}
         <div className="lg:text-left text-center">
-          <h1 className="mb-6 font-bold text-5xl md:text-6xl lg:text-7xl text-center leading-tight">
+          <h1 className="mb-6 font-bold text-4xl md:text-6xl lg:text-7xl text-center leading-tight">
             Build With Us
           </h1>
-          <p className="mb-8 max-w-2xl text-muted-foreground text-xl text-center leading-relaxed">
+          <p className="mb-8 max-w-2xl text-muted-foreground text-lg md:text-xl text-center leading-relaxed">
             We&apos;ve helped brands go beyond just &quot;going digital&quot; —
             we help them grow with purpose. From business websites to mobile
             apps and event platforms, we build solutions that don’t just look
