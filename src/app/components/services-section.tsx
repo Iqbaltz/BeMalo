@@ -5,23 +5,23 @@ export default function ServicesSection() {
     {
       title: "Website Development",
       description:
-        "Build a gorgeous website for your business. We create modern, responsive websites that convert visitors into customers.",
+        "Build a professional website that is fast, secure, and ready to support your business growth.",
       image:
         "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       alt: "Modern office workspace with computer displaying website development",
     },
     {
-      title: "App Development",
+      title: "Web Design",
       description:
-        "Build a mobile experience your users won't forget. Native and cross-platform apps that perform beautifully.",
+        "Create a modern, responsive, and visually appealing website optimized for all devices.",
       image:
         "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       alt: "Laptop screen showing mobile app development interface",
     },
     {
-      title: "Event Website",
+      title: "Web Consultation",
       description:
-        "Create stunning event experiences that reflect your brand and engage your audience effectively.",
+        "Gain strategic guidance on site structure, technology, and performance to maximize your website’s potential.",
       image:
         "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
       alt: "Elegant event setup with beautiful table arrangements and catering",

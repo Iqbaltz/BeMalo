@@ -1,8 +1,8 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  --background: #0a0a0a;
+  --foreground: #ededed;
   --font-plus-jakarta-sans: 'Plus Jakarta Sans', sans-serif;
 }
 
@@ -13,13 +13,6 @@
   --color-red: #F87171;
   --color-destructive: #F87171;
   --color-success: #22C55E;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
 }
 
 body {
