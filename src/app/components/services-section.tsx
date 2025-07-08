@@ -6,24 +6,21 @@ export default function ServicesSection() {
       title: "Website Development",
       description:
         "Build a professional website that is fast, secure, and ready to support your business growth.",
-      image:
-        "https://images.unsplash.com/photo-1460925895917-afdab827c52f?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "/images/service1.jpg",
       alt: "Modern office workspace with computer displaying website development",
     },
     {
       title: "Web Design",
       description:
         "Create a modern, responsive, and visually appealing website optimized for all devices.",
-      image:
-        "https://images.unsplash.com/photo-1512941937669-90a1b58e7e9c?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "/images/service2.jpg",
       alt: "Laptop screen showing mobile app development interface",
     },
     {
       title: "Web Consultation",
       description:
         "Gain strategic guidance on site structure, technology, and performance to maximize your website’s potential.",
-      image:
-        "https://images.unsplash.com/photo-1530103862676-de8c9debad1d?ixlib=rb-4.0.3&auto=format&fit=crop&w=500&h=300",
+      image: "/images/service3.jpg",
       alt: "Elegant event setup with beautiful table arrangements and catering",
     },
   ];
