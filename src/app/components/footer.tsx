@@ -50,33 +50,33 @@ export default function Footer() {
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  Mobile App Development
+                  Web Design
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   E-commerce Solutions
                 </a>
-              </li>
+              </li> */}
               <li>
                 <a
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  UI/UX Design
+                  Web Consultation
                 </a>
               </li>
-              <li>
+              {/* <li>
                 <a
                   href="#"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
                   Brand Identity
                 </a>
-              </li>
+              </li> */}
             </ul>
           </div>
         </div>

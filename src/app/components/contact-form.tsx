@@ -79,7 +79,7 @@ export default function ContactForm() {
             Got a Plan?
           </h2>
           <p className="text-gray-600 text-lg md:text-xl">
-            Share your vision and we&apos;ll make it come to life.
+            Share your vision! together, we’ll turn it into reality.
           </p>
         </div>
 

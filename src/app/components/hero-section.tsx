@@ -13,10 +13,7 @@ export default function HeroSection() {
             Build With Us
           </h1>
           <p className="mb-8 max-w-2xl text-muted-foreground text-lg md:text-xl text-center leading-relaxed">
-            We&apos;ve helped brands go beyond just &quot;going digital&quot; —
-            we help them grow with purpose. From business websites to mobile
-            apps and event platforms, we build solutions that don’t just look
-            good — they perform.
+            build your websites, grow your business.
           </p>
         </div>
       </div>
