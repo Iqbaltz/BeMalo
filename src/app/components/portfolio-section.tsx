@@ -1,3 +1,6 @@
+"use client";
+import { motion } from "framer-motion";
+
 export default function PortfolioSection() {
   const projects = [
     {
@@ -25,25 +28,50 @@ export default function PortfolioSection() {
   ];
 
   return (
-    <section id="work" className="bg-primary py-20">
+    <section id="work" className="bg-primary py-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
-          <p className="mb-4 font-semibold md:text-lg">CREATIVE PORTFOLIO</p>
-          <h2 className="mb-6 font-bold text-white text-3xl md:text-5xl">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 font-semibold md:text-lg"
+          >
+            CREATIVE PORTFOLIO
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-6 font-bold text-white text-3xl md:text-5xl"
+          >
             Recent Works
-          </h2>
-          <p className="mx-auto max-w-3xl text-blue-100 text-lg md:text-xl">
+          </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mx-auto max-w-3xl text-blue-100 text-lg md:text-xl"
+          >
             These are our recent examples of packages or entire business
             websites that we built around the world and it&apos;s becoming
             better and better.
-          </p>
+          </motion.p>
         </div>
 
         <div className="gap-6 grid md:grid-cols-2 lg:grid-cols-3">
           {projects.map((project, index) => (
-            <a
+            <motion.a
               key={index}
-              className="group relative shadow-xl rounded-2xl overflow-hidden cursor-pointer portfolio-item"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.15 }}
+              whileHover={{ y: -10, transition: { duration: 0.3 } }}
+              className="group relative shadow-xl rounded-2xl overflow-hidden cursor-pointer portfolio-item hover:shadow-2xl transition-shadow duration-300"
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"
@@ -51,7 +79,7 @@ export default function PortfolioSection() {
               <img
                 src={project.image}
                 alt={project.alt}
-                className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-300"
+                className="w-full h-64 object-cover object-top group-hover:scale-110 transition-transform duration-500"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/80 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <div className="right-6 bottom-6 left-6 absolute">
@@ -61,7 +89,7 @@ export default function PortfolioSection() {
                   <p className="text-gray-200 text-sm">{project.description}</p>
                 </div>
               </div>
-            </a>
+            </motion.a>
           ))}
         </div>
       </div>

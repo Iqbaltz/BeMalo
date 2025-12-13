@@ -1,4 +1,6 @@
+"use client";
 import { Card, CardContent } from "@/app/components/ui/card";
+import { motion } from "framer-motion";
 
 export default function ServicesSection() {
   const services = [
@@ -26,41 +28,59 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" className="bg-background py-20">
+    <section id="services" className="bg-background py-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
-          <p className="mb-4 font-semibold text-primary md:text-lg">
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+            className="mb-4 font-semibold text-primary md:text-lg"
+          >
             WHAT WE DO
-          </p>
-          <h2 className="mb-6 font-bold text-foreground text-3xl md:text-5xl">
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="mb-6 font-bold text-foreground text-3xl md:text-5xl"
+          >
             We help to build clients their
             <br />
             <span>dream projects</span>
-          </h2>
+          </motion.h2>
         </div>
 
         <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3">
           {services.map((service, index) => (
-            <Card
+            <motion.div
               key={index}
-              className="group bg-card bg-white border-none rounded-2xl overflow-hidden cursor-pointer service-card"
+              initial={{ opacity: 0, y: 30 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              viewport={{ once: true }}
+              transition={{ duration: 0.5, delay: index * 0.1 }}
+              whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <div className="relative overflow-hidden">
-                <img
-                  src={service.image}
-                  alt={service.alt}
-                  className="w-full h-48 object-cover group-hover:scale-105 transition-transform duration-300"
-                />
-              </div>
-              <CardContent className="p-6">
-                <h3 className="mb-3 font-semibold text-background text-lg md:text-xl">
-                  {service.title}
-                </h3>
-                <p className="text-background leading-relaxed">
-                  {service.description}
-                </p>
-              </CardContent>
-            </Card>
+              <Card className="group bg-card bg-white border-none rounded-2xl overflow-hidden cursor-pointer service-card h-full shadow-lg hover:shadow-2xl transition-shadow duration-300">
+                <div className="relative overflow-hidden">
+                  <img
+                    src={service.image}
+                    alt={service.alt}
+                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
+                  />
+                </div>
+                <CardContent className="p-6">
+                  <h3 className="mb-3 font-semibold text-background text-lg md:text-xl">
+                    {service.title}
+                  </h3>
+                  <p className="text-background leading-relaxed">
+                    {service.description}
+                  </p>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
         </div>
       </div>
