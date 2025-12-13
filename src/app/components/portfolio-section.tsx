@@ -71,7 +71,7 @@ export default function PortfolioSection() {
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.15 }}
               whileHover={{ y: -10, transition: { duration: 0.3 } }}
-              className="group relative shadow-xl rounded-2xl overflow-hidden cursor-pointer portfolio-item hover:shadow-2xl transition-shadow duration-300"
+              className="group relative shadow-xl hover:shadow-2xl rounded-2xl overflow-hidden transition-shadow duration-300 cursor-pointer portfolio-item"
               href={project.url}
               target="_blank"
               rel="noopener noreferrer"

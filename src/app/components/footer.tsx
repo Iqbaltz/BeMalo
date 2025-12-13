@@ -82,7 +82,7 @@ export default function Footer() {
         </div>
 
         {/* Social Links & Copyright */}
-        <div className="flex md:flex-row flex-col justify-between items-center mt-12 pt-8 border-t border-border">
+        <div className="flex md:flex-row flex-col justify-between items-center mt-12 pt-8 border-border border-t">
           <div className="flex space-x-6 mb-4 md:mb-0">
             <a
               href="#"

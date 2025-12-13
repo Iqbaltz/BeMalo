@@ -92,7 +92,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 text-lg md:text-xl"
           >
-            Share your vision! together, we'll turn it into reality.
+            Share your vision! together, we&apos;ll turn it into reality.
           </motion.p>
         </div>
 

@@ -63,7 +63,7 @@ export default function ServicesSection() {
               transition={{ duration: 0.5, delay: index * 0.1 }}
               whileHover={{ y: -8, transition: { duration: 0.3 } }}
             >
-              <Card className="group bg-card bg-white border-none rounded-2xl overflow-hidden cursor-pointer service-card h-full shadow-lg hover:shadow-2xl transition-shadow duration-300">
+              <Card className="group bg-card bg-white shadow-lg hover:shadow-2xl border-none rounded-2xl h-full overflow-hidden transition-shadow duration-300 cursor-pointer service-card">
                 <div className="relative overflow-hidden">
                   <img
                     src={service.image}
