@@ -85,19 +85,21 @@ export default function Footer() {
         <div className="flex md:flex-row flex-col justify-between items-center mt-12 pt-8 border-border border-t">
           <div className="flex space-x-6 mb-4 md:mb-0">
             <a
-              href="#"
+              href="https://web.facebook.com/profile.php?id=61577782198712"
+              target="_blank"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
             >
               <FaFacebookF className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.instagram.com/bemalo.id/"
+              target="_blank"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
             >
               <FaInstagram className="w-5 h-5" />
             </a>
             <a
-              href="#"
+              href="https://www.linkedin.com/company/bemalo-id/"
               className="text-muted-foreground hover:text-accent transition-colors duration-200"
             >
               <FaLinkedinIn className="w-5 h-5" />
