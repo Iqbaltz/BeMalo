@@ -1,0 +1,11 @@
+# Robots.txt for BeMalo - Jasa Pembuatan Website Medan
+# https://bemalo.id
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://bemalo.id/sitemap.xml
+
+# Block admin and API routes if any
+Disallow: /api/

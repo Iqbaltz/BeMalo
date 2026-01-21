@@ -8,7 +8,7 @@ import VisionSection from "./components/vision-section";
 
 export default function Home() {
   return (
-    <div className="bg-background min-h-screen text-foreground">
+    <main className="bg-background min-h-screen text-foreground">
       <Navigation />
       <HeroSection />
       <VisionSection />
@@ -16,6 +16,6 @@ export default function Home() {
       <ContactForm />
       <PortfolioSection />
       <Footer />
-    </div>
+    </main>
   );
 }

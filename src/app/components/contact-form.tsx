@@ -73,17 +73,26 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" className="bg-white py-32">
+    <section id="contact" aria-label="Hubungi BeMalo - Jasa Web Medan" className="bg-white py-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
         <div className="mb-12 text-center">
-          <motion.h2
+          <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
+            className="mb-4 font-semibold text-primary md:text-lg"
+          >
+            KONSULTASI GRATIS
+          </motion.p>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.1 }}
             className="mb-4 font-bold text-gray-900 text-3xl md:text-5xl"
           >
-            Got a Plan?
+            Siap Bikin Website?
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -92,7 +101,7 @@ export default function ContactForm() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="text-gray-600 text-lg md:text-xl"
           >
-            Share your vision! together, we&apos;ll turn it into reality.
+            Ceritakan kebutuhan website Anda! Tim jasa pembuatan website profesional kami siap membantu mewujudkan impian digital Anda.
           </motion.p>
         </div>
 
@@ -116,7 +125,7 @@ export default function ContactForm() {
                       <FormControl>
                         <Input
                           {...field}
-                          placeholder="Enter your name"
+                          placeholder="Masukkan nama Anda"
                           className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
                         />
                       </FormControl>
@@ -134,7 +143,7 @@ export default function ContactForm() {
                         <Input
                           {...field}
                           type="email"
-                          placeholder="Enter your email"
+                          placeholder="Masukkan email Anda"
                           className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
                         />
                       </FormControl>
@@ -152,7 +161,7 @@ export default function ContactForm() {
                         <Input
                           {...field}
                           type="tel"
-                          placeholder="Enter your phone number"
+                          placeholder="Masukkan nomor telepon"
                           className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
                         />
                       </FormControl>
@@ -171,7 +180,7 @@ export default function ContactForm() {
                       <FormControl>
                         <Input
                           {...field}
-                          placeholder="Enter your budget"
+                          placeholder="Masukkan budget Anda"
                           className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
                         />
                       </FormControl>
@@ -189,7 +198,7 @@ export default function ContactForm() {
                         <Textarea
                           {...field}
                           rows={4}
-                          placeholder="Tell us about your project"
+                          placeholder="Ceritakan tentang proyek website Anda"
                           className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 resize-none placeholder-gray-500"
                         />
                       </FormControl>
@@ -210,7 +219,7 @@ export default function ContactForm() {
                     Sending...
                   </>
                 ) : (
-                  "Send Message"
+                  "Kirim Pesan"
                 )}
               </Button>
             </form>

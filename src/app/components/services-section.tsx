@@ -5,30 +5,30 @@ import { motion } from "framer-motion";
 export default function ServicesSection() {
   const services = [
     {
-      title: "Website Development",
+      title: "Jasa Pembuatan Website",
       description:
-        "Build a professional website that is fast, secure, and ready to support your business growth.",
+        "Bikin website profesional yang cepat, aman, dan siap mendukung pertumbuhan bisnis Anda. Cocok untuk company profile, toko online, dan landing page.",
       image: "/images/service1.jpg",
-      alt: "Modern office workspace with computer displaying website development",
+      alt: "Jasa pembuatan website profesional di Medan - BeMalo web development",
     },
     {
-      title: "Web Design",
+      title: "Jasa Desain Web",
       description:
-        "Create a modern, responsive, and visually appealing website optimized for all devices.",
+        "Desain website modern, responsif, dan menarik yang dioptimalkan untuk semua perangkat. UI/UX design yang user-friendly untuk pengalaman terbaik.",
       image: "/images/service2.jpg",
-      alt: "Laptop screen showing mobile app development interface",
+      alt: "Jasa desain web modern dan responsif - BeMalo web design Medan",
     },
     {
-      title: "Web Consultation",
+      title: "Konsultasi Web",
       description:
-        "Gain strategic guidance on site structure, technology, and performance to maximize your website’s potential.",
+        "Dapatkan panduan strategis tentang struktur website, teknologi, dan performa untuk memaksimalkan potensi digital bisnis Anda.",
       image: "/images/service3.jpg",
-      alt: "Elegant event setup with beautiful table arrangements and catering",
+      alt: "Konsultasi pembuatan website untuk bisnis - BeMalo digital agency",
     },
   ];
 
   return (
-    <section id="services" className="bg-background py-32">
+    <section id="services" aria-label="Layanan Jasa Web BeMalo" className="bg-background py-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
           <motion.p
@@ -38,7 +38,7 @@ export default function ServicesSection() {
             transition={{ duration: 0.6 }}
             className="mb-4 font-semibold text-primary md:text-lg"
           >
-            WHAT WE DO
+            LAYANAN KAMI
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
@@ -47,10 +47,19 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.2 }}
             className="mb-6 font-bold text-foreground text-3xl md:text-5xl"
           >
-            We help to build clients their
+            Jasa Bikin Website
             <br />
-            <span>dream projects</span>
+            <span>untuk Bisnis Anda</span>
           </motion.h2>
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mx-auto max-w-2xl text-muted-foreground text-lg"
+          >
+            Kami menyediakan jasa pembuatan website lengkap mulai dari desain hingga development. Solusi digital terbaik untuk UMKM dan perusahaan di Medan dan seluruh Indonesia.
+          </motion.p>
         </div>
 
         <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3">

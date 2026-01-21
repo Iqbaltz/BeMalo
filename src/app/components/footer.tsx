@@ -3,29 +3,32 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-background py-32">
+    <footer className="bg-background py-32" aria-label="Footer BeMalo - Jasa Web Medan">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="gap-12 grid lg:grid-cols-2">
           {/* Contact Info */}
           <div>
             <h3 className="mb-6 font-bold text-foreground text-3xl">
-              Let&apos;s Talk!
+              Hubungi Kami
             </h3>
+            <p className="mb-4 text-muted-foreground">
+              Siap membantu bikin website impian Anda. Konsultasi gratis untuk jasa pembuatan website di Medan dan seluruh Indonesia.
+            </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">
+                <a href="mailto:customer_care@bemalo.id" className="text-muted-foreground hover:text-foreground">
                   customer_care@bemalo.id
-                </span>
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <span className="text-muted-foreground">+62 813-8526-7252</span>
+                <a href="tel:+6281385267252" className="text-muted-foreground hover:text-foreground">+62 813-8526-7252</a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
                 <span className="text-muted-foreground">
-                  Jakarta, Indonesia
+                  Medan, Sumatera Utara, Indonesia
                 </span>
               </div>
             </div>
@@ -34,39 +37,39 @@ export default function Footer() {
           {/* Services */}
           <div>
             <h4 className="mb-6 font-semibold text-foreground text-xl">
-              Our Services
+              Layanan Kami
             </h4>
             <ul className="space-y-3">
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  Website Development
+                  Jasa Pembuatan Website
                 </a>
               </li>
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  Web Design
+                  Jasa Desain Web
                 </a>
               </li>
-              {/* <li>
-                <a
-                  href="#"
-                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
-                >
-                  E-commerce Solutions
-                </a>
-              </li> */}
               <li>
                 <a
-                  href="#"
+                  href="#services"
                   className="text-muted-foreground hover:text-foreground transition-colors duration-200"
                 >
-                  Web Consultation
+                  Website Company Profile
+                </a>
+              </li>
+              <li>
+                <a
+                  href="#services"
+                  className="text-muted-foreground hover:text-foreground transition-colors duration-200"
+                >
+                  Konsultasi Web
                 </a>
               </li>
               {/* <li>
