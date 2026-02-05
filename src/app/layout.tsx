@@ -10,7 +10,8 @@ const plusJakartaSans = Plus_Jakarta_Sans({
 
 export const metadata: Metadata = {
   title: {
-    default: "BeMalo - Jasa Pembuatan Website Medan | Bikin Website Profesional",
+    default:
+      "BeMalo - Jasa Pembuatan Website Medan | Bikin Website Profesional",
     template: "%s | BeMalo - Jasa Web Design Medan",
   },
   description:
@@ -60,7 +61,7 @@ export const metadata: Metadata = {
     type: "website",
     images: [
       {
-        url: "/images/og-image.jpg",
+        url: "/images/bemalo.png",
         width: 1200,
         height: 630,
         alt: "BeMalo - Jasa Pembuatan Website Medan",
@@ -72,7 +73,7 @@ export const metadata: Metadata = {
     title: "BeMalo - Jasa Pembuatan Website Medan",
     description:
       "Jasa pembuatan website profesional di Medan. Bikin website, desain web, dan konsultasi web untuk bisnis Anda.",
-    images: ["/images/og-image.jpg"],
+    images: ["/images/bemalo.png"],
   },
   robots: {
     index: true,
@@ -98,10 +99,10 @@ const jsonLd = {
   description:
     "Jasa pembuatan website profesional di Medan. Layanan bikin website, jasa desain web, web development, dan konsultasi web untuk bisnis Anda.",
   url: "https://bemalo.id",
-  logo: "https://bemalo.id/images/logo.png",
-  image: "https://bemalo.id/images/og-image.jpg",
+  logo: "https://bemalo.id/images/bemalo.png",
+  image: "https://bemalo.id/images/bemalo.png",
   telephone: "+62 813-8526-7252",
-  email: "customer_care@bemalo.id",
+  email: "bemalo.id@gmail.com",
   address: {
     "@type": "PostalAddress",
     addressLocality: "Medan",
