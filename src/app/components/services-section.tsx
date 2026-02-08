@@ -9,14 +9,14 @@ export default function ServicesSection() {
       description:
         "Bikin website profesional yang cepat, aman, dan siap mendukung pertumbuhan bisnis Anda. Cocok untuk company profile, toko online, dan landing page.",
       image: "/images/service1.jpg",
-      alt: "Jasa pembuatan website profesional di Medan - BeMalo web development",
+      alt: "Jasa pembuatan website profesional di Indonesia - BeMalo web development",
     },
     {
       title: "Jasa Desain Web",
       description:
         "Desain website modern, responsif, dan menarik yang dioptimalkan untuk semua perangkat. UI/UX design yang user-friendly untuk pengalaman terbaik.",
       image: "/images/service2.jpg",
-      alt: "Jasa desain web modern dan responsif - BeMalo web design Medan",
+      alt: "Jasa desain web modern dan responsif - BeMalo web design Indonesia",
     },
     {
       title: "Konsultasi Web",
@@ -28,7 +28,11 @@ export default function ServicesSection() {
   ];
 
   return (
-    <section id="services" aria-label="Layanan Jasa Web BeMalo" className="bg-background py-32">
+    <section
+      id="services"
+      aria-label="Layanan Jasa Web BeMalo"
+      className="bg-background py-32"
+    >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12 text-center">
           <motion.p
@@ -58,7 +62,9 @@ export default function ServicesSection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mx-auto max-w-2xl text-muted-foreground text-lg"
           >
-            Kami menyediakan jasa pembuatan website lengkap mulai dari desain hingga development. Solusi digital terbaik untuk UMKM dan perusahaan di Medan dan seluruh Indonesia.
+            Kami menyediakan jasa pembuatan website lengkap mulai dari desain
+            hingga development. Solusi digital terbaik untuk UMKM di seluruh
+            Indonesia.
           </motion.p>
         </div>
 

@@ -20,7 +20,9 @@ export default function HeroSection() {
             className="mb-6 font-bold text-4xl md:text-6xl lg:text-7xl text-center leading-tight"
           >
             Jasa Pembuatan Website
-            <span className="block text-[#8ca5ff]">Profesional di Medan</span>
+            <span className="block text-[#8ca5ff]">
+              Profesional di Indonesia
+            </span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 20 }}

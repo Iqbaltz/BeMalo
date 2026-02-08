@@ -24,6 +24,11 @@ export default function Navigation() {
   }, []);
 
   const scrollToSection = (sectionId: string) => {
+    if (window.location.pathname !== "/") {
+      window.location.href = `/#${sectionId}`;
+      return;
+    }
+
     const element = document.getElementById(sectionId);
     if (element) {
       element.scrollIntoView({ behavior: "smooth" });
@@ -48,7 +53,10 @@ export default function Navigation() {
               onClick={() => scrollToSection("hero")}
             >
               <div className="flex justify-center items-center rounded-lg w-12 h-12 gradient-hero">
-                <img src="/images/bemalo.png" alt="BeMalo - Jasa Pembuatan Website Medan" />
+                <img
+                  src="/images/bemalo.png"
+                  alt="BeMalo - Jasa Pembuatan Website Medan"
+                />
               </div>
               <span className="font-semibold text-foreground text-xl">
                 beMalo
@@ -82,7 +90,12 @@ export default function Navigation() {
 
           {/* Get In Touch Button */}
           <div className="hidden md:block">
-            <a href="https://wa.me/6281385267252" target="_blank" rel="noopener noreferrer" aria-label="Hubungi kami via WhatsApp untuk konsultasi jasa pembuatan website">
+            <a
+              href="https://wa.me/6281385267252"
+              target="_blank"
+              rel="noopener noreferrer"
+              aria-label="Hubungi kami via WhatsApp untuk konsultasi jasa pembuatan website"
+            >
               <Button
                 onClick={() => {}}
                 className="bg-accent bg-primary hover:bg-accent/90 rounded-full text-accent-foreground"
@@ -121,7 +134,11 @@ export default function Navigation() {
                   >
                     Portfolio
                   </button>
-                  <a href="https://wa.me/6281385267252" target="_blank" rel="noopener noreferrer">
+                  <a
+                    href="https://wa.me/6281385267252"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                  >
                     <Button
                       onClick={() => {}}
                       className="mt-4 w-full text-accent-foreground"

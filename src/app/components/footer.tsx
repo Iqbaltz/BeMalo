@@ -3,7 +3,10 @@ import { FaFacebookF, FaInstagram, FaLinkedinIn } from "react-icons/fa";
 
 export default function Footer() {
   return (
-    <footer className="bg-background py-32" aria-label="Footer BeMalo - Jasa Web Medan">
+    <footer
+      className="bg-background py-32"
+      aria-label="Footer BeMalo - Jasa Web Medan"
+    >
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="gap-12 grid lg:grid-cols-2">
           {/* Contact Info */}
@@ -12,18 +15,27 @@ export default function Footer() {
               Hubungi Kami
             </h3>
             <p className="mb-4 text-muted-foreground">
-              Siap membantu bikin website impian Anda. Konsultasi gratis untuk jasa pembuatan website di Medan dan seluruh Indonesia.
+              Siap membantu bikin website impian Anda. Konsultasi gratis untuk
+              jasa pembuatan website di Indonesia dan seluruh Indonesia.
             </p>
             <div className="space-y-4">
               <div className="flex items-center space-x-3">
                 <Mail className="w-5 h-5 text-accent" />
-                <a href="mailto:customer_care@bemalo.id" className="text-muted-foreground hover:text-foreground">
+                <a
+                  href="mailto:customer_care@bemalo.id"
+                  className="text-muted-foreground hover:text-foreground"
+                >
                   customer_care@bemalo.id
                 </a>
               </div>
               <div className="flex items-center space-x-3">
                 <Phone className="w-5 h-5 text-accent" />
-                <a href="tel:+6281385267252" className="text-muted-foreground hover:text-foreground">+62 813-8526-7252</a>
+                <a
+                  href="tel:+6281385267252"
+                  className="text-muted-foreground hover:text-foreground"
+                >
+                  +62 813-8526-7252
+                </a>
               </div>
               <div className="flex items-center space-x-3">
                 <MapPin className="w-5 h-5 text-accent" />
