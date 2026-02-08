@@ -1,3 +1,4 @@
+import BlogsSection from "./components/blogs-section";
 import ContactForm from "./components/contact-form";
 import Footer from "./components/footer";
 import HeroSection from "./components/hero-section";
@@ -15,6 +16,7 @@ export default function Home() {
       <ServicesSection />
       <ContactForm />
       <PortfolioSection />
+      <BlogsSection />
       <Footer />
     </main>
   );

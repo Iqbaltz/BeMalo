@@ -59,9 +59,9 @@ export const BLOG_POSTS: BlogPost[] = [
 
     <p>Jika Anda adalah pelaku UMKM yang ingin mulai memiliki website profesional, <a href="https://bemalo.id" target="_blank" rel="noopener noreferrer">Bemalo</a> siap membantu Anda merancang dan membangun website yang sesuai dengan kebutuhan bisnis Anda. Dengan pendekatan yang tepat, website dapat menjadi alat pertumbuhan yang sangat powerful untuk UMKM.</p>
   `,
-    author: "M. Iqbal",
-    date: "2024-02-05",
-    image: "/images/blog/blog-1.png",
+    author: "Muhammad Iqbal",
+    date: "2026-02-08",
+    image: "/images/blog/blog-1.webp",
     tags: ["Bisnis", "UMKM", "Website", "Digital Marketing", "Jasa Website"],
   },
   // {
@@ -113,9 +113,9 @@ export const BLOG_POSTS: BlogPost[] = [
 
   //   <p>Jika Anda sedang mencari jasa pembuatan website yang profesional dan dapat dipercaya, <a href="https://bemalo.id" target="_blank" rel="noopener noreferrer">Bemalo</a> siap membantu Anda mewujudkan website yang mendukung pertumbuhan bisnis secara berkelanjutan.</p>
   // `,
-  //   author: "M. Iqbal",
-  //   date: "2024-01-28",
-  //   image: "/images/blog/blog-2.png",
+  //   author: "Muhammad Iqbal",
+  //   date: "2026-01-28",
+  //   image: "/images/blog/blog-2.webp",
   //   tags: [
   //     "Tips",
   //     "Jasa Website",
@@ -180,9 +180,9 @@ export const BLOG_POSTS: BlogPost[] = [
 
   //   <p>Jika website Anda mulai terlihat ketinggalan zaman, mungkin ini saat yang tepat untuk melakukan pembaruan. Bersama <a href="https://bemalo.id" target="_blank" rel="noopener noreferrer">Bemalo</a>, Anda dapat membangun website yang modern, relevan, dan siap bersaing di era digital.</p>
   // `,
-  //   author: "M. Iqbal",
+  //   author: "Muhammad Iqbal",
   //   date: "2026-01-15",
-  //   image: "/images/blog/blog-3.png",
+  //   image: "/images/blog/blog-3.webp",
   //   tags: ["Desain Website", "Tren Desain", "Web Design 2026", "UI/UX"],
   // },
 ];
