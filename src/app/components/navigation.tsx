@@ -68,6 +68,12 @@ export default function Navigation() {
           <div className="hidden md:block">
             <div className="flex items-center space-x-8">
               <button
+                onClick={() => (window.location.href = "/blogs")}
+                className="px-3 py-2 font-medium text-muted-foreground hover:text-foreground text-sm transition-colors duration-200"
+              >
+                Artikel
+              </button>
+              <button
                 onClick={() => scrollToSection("about")}
                 className="px-3 py-2 font-medium text-muted-foreground hover:text-foreground text-sm transition-colors duration-200"
               >
@@ -116,6 +122,13 @@ export default function Navigation() {
               <SheetContent side="right" className="bg-card">
                 <SheetTitle></SheetTitle>
                 <div className="flex flex-col space-y-4 mt-8">
+                  <button
+                    onClick={() => (window.location.href = "/blogs")}
+                    className="px-3 py-2 pb-3 border-b font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
+                  >
+                    Artikel
+                  </button>
+
                   <button
                     onClick={() => scrollToSection("about")}
                     className="px-3 py-2 pb-3 border-b font-medium text-muted-foreground hover:text-foreground text-base text-left transition-colors duration-200"
