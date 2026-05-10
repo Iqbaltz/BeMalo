@@ -44,7 +44,7 @@ export default function ContactForm() {
             "Content-Type": "application/json",
           },
           body: JSON.stringify(data),
-        }
+        },
       );
 
       const result = await res.json();
@@ -73,35 +73,40 @@ export default function ContactForm() {
   };
 
   return (
-    <section id="contact" aria-label="Hubungi BeMalo - Jasa Web Medan" className="bg-white py-32">
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-4xl">
-        <div className="mb-12 text-center">
+    <section
+      id="contact"
+      aria-label="Hubungi BeMalo - Jasa Web Medan"
+      className="bg-white py-32"
+    >
+      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
+        <div className="mb-16 text-center">
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6 }}
-            className="mb-4 font-semibold text-primary md:text-lg"
+            className="mb-3 font-semibold text-[#6E1C1C] md:text-lg"
           >
-            KONSULTASI GRATIS
+            Konsultasi Sekarang
           </motion.p>
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.1 }}
-            className="mb-4 font-bold text-gray-900 text-3xl md:text-5xl"
+            className="mb-4 font-bold text-black text-4xl md:text-5xl lg:text-[56px] tracking-tight"
           >
-            Siap Bikin Website?
+            Kami siap membantu Anda
           </motion.h2>
           <motion.p
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
             transition={{ duration: 0.6, delay: 0.2 }}
-            className="text-gray-600 text-lg md:text-xl"
+            className="mx-auto max-w-2xl text-gray-700 text-base md:text-lg"
           >
-            Ceritakan kebutuhan website Anda! Tim jasa pembuatan website profesional kami siap membantu mewujudkan impian digital Anda.
+            Ceritakan kebutuhan Anda! kami siap membantu mewujudkan impian
+            <br className="hidden md:block" /> digital Anda.
           </motion.p>
         </div>
 
@@ -114,9 +119,9 @@ export default function ContactForm() {
           <Form {...form}>
             <form
               onSubmit={form.handleSubmit(onSubmit)}
-              className="gap-6 grid md:grid-cols-2"
+              className="gap-x-6 gap-y-4 grid md:grid-cols-2"
             >
-              <div className="space-y-6 col-span-2 md:col-span-1">
+              <div className="flex flex-col gap-4 col-span-2 md:col-span-1 h-full">
                 <FormField
                   control={form.control}
                   name={"name" as never}
@@ -126,7 +131,7 @@ export default function ContactForm() {
                         <Input
                           {...field}
                           placeholder="Masukkan nama Anda"
-                          className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
+                          className="bg-white px-4 py-6 border border-gray-300 focus:border-gray-500 rounded-xl focus:ring-1 focus:ring-gray-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500 text-base"
                         />
                       </FormControl>
                       <FormMessage />
@@ -144,7 +149,7 @@ export default function ContactForm() {
                           {...field}
                           type="email"
                           placeholder="Masukkan email Anda"
-                          className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
+                          className="bg-white px-4 py-6 border border-gray-300 focus:border-gray-500 rounded-xl focus:ring-1 focus:ring-gray-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500 text-base"
                         />
                       </FormControl>
                       <FormMessage />
@@ -162,7 +167,7 @@ export default function ContactForm() {
                           {...field}
                           type="tel"
                           placeholder="Masukkan nomor telepon"
-                          className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
+                          className="bg-white px-4 py-6 border border-gray-300 focus:border-gray-500 rounded-xl focus:ring-1 focus:ring-gray-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500 text-base"
                         />
                       </FormControl>
                       <FormMessage />
@@ -171,7 +176,7 @@ export default function ContactForm() {
                 />
               </div>
 
-              <div className="space-y-6 col-span-2 md:col-span-1">
+              <div className="flex flex-col gap-4 col-span-2 md:col-span-1 h-full">
                 <FormField
                   control={form.control}
                   name={"budget" as never}
@@ -181,7 +186,7 @@ export default function ContactForm() {
                         <Input
                           {...field}
                           placeholder="Masukkan budget Anda"
-                          className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500"
+                          className="bg-white px-4 py-6 border border-gray-300 focus:border-gray-500 rounded-xl focus:ring-1 focus:ring-gray-500 w-full text-gray-900 transition-colors duration-200 placeholder-gray-500 text-base"
                         />
                       </FormControl>
                       <FormMessage />
@@ -193,13 +198,12 @@ export default function ContactForm() {
                   control={form.control}
                   name={"message" as never}
                   render={({ field }) => (
-                    <FormItem>
-                      <FormControl>
+                    <FormItem className="flex-1 flex flex-col">
+                      <FormControl className="flex-1">
                         <Textarea
                           {...field}
-                          rows={4}
                           placeholder="Ceritakan tentang proyek website Anda"
-                          className="bg-gray-50 px-4 py-4 border border-gray-200 focus:border-transparent rounded-lg focus:ring-2 focus:ring-blue-500 w-full text-gray-900 transition-colors duration-200 resize-none placeholder-gray-500"
+                          className="bg-white px-4 py-6 border border-gray-300 focus:border-gray-500 rounded-xl focus:ring-1 focus:ring-gray-500 w-full h-full text-gray-900 transition-colors duration-200 resize-none placeholder-gray-500 text-base"
                         />
                       </FormControl>
                       <FormMessage />
@@ -208,20 +212,22 @@ export default function ContactForm() {
                 />
               </div>
 
-              <Button
-                type="submit"
-                disabled={isSubmitting}
-                className="col-span-2 hover:opacity-90 px-8 py-4 w-full h-auto font-semibold text-white transition-all duration-200 gradient-cta transform"
-              >
-                {isSubmitting ? (
-                  <>
-                    <Loader2 className="mr-2 w-4 h-4 animate-spin" />
-                    Sending...
-                  </>
-                ) : (
-                  "Kirim Pesan"
-                )}
-              </Button>
+              <div className="col-span-2 mt-4">
+                <Button
+                  type="submit"
+                  disabled={isSubmitting}
+                  className="bg-[#333333] hover:bg-[#1a1a1a] rounded-xl px-8 py-4 w-full h-auto font-medium text-lg text-white transition-all duration-200 shadow-sm"
+                >
+                  {isSubmitting ? (
+                    <>
+                      <Loader2 className="mr-2 w-5 h-5 animate-spin" />
+                      Sending...
+                    </>
+                  ) : (
+                    "Kirim Pesan"
+                  )}
+                </Button>
+              </div>
             </form>
           </Form>
         </motion.div>

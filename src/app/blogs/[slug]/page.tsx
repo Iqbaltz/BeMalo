@@ -6,6 +6,7 @@ import Footer from "@/app/components/footer";
 import { Metadata } from "next";
 import Link from "next/link";
 import { ArrowLeft, Calendar, User, Tag } from "lucide-react";
+import { formatDate } from "@/lib/utils";
 
 export async function generateStaticParams() {
   return BLOG_POSTS.map((post) => ({
@@ -72,7 +73,7 @@ export default async function BlogPostPage({
           <div className="flex flex-wrap justify-center items-center gap-4 mb-4 text-muted-foreground text-sm">
             <div className="flex items-center gap-1">
               <Calendar className="w-4 h-4" />
-              <time dateTime={post.date}>{post.date}</time>
+              <time dateTime={post.date}>{formatDate(post.date)}</time>
             </div>
             <div className="bg-muted-foreground rounded-full w-1 h-1" />
             <div className="flex items-center gap-1">

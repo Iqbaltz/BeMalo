@@ -1,100 +1,79 @@
 "use client";
-import { Card, CardContent } from "@/app/components/ui/card";
 import { motion } from "framer-motion";
+import { PenTool, Code2, Users } from "lucide-react";
 
 export default function ServicesSection() {
-  const services = [
+  const steps = [
     {
-      title: "Jasa Pembuatan Website",
-      description:
-        "Bikin website profesional yang cepat, aman, dan siap mendukung pertumbuhan bisnis Anda. Cocok untuk company profile, toko online, dan landing page.",
-      image: "/images/service1.jpg",
-      alt: "Jasa pembuatan website profesional di Indonesia - BeMalo web development",
+      title: "Design",
+      description: "Merancang solusi atau sistem sesuai kebutuhan pengguna.",
+      icon: <PenTool className="w-10 h-10 text-white" strokeWidth={1.5} />,
     },
     {
-      title: "Jasa Desain Web",
+      title: "Develop",
       description:
-        "Desain website modern, responsif, dan menarik yang dioptimalkan untuk semua perangkat. UI/UX design yang user-friendly untuk pengalaman terbaik.",
-      image: "/images/service2.jpg",
-      alt: "Jasa desain web modern dan responsif - BeMalo web design Indonesia",
+        "Mengembangkan atau membangun solusi tersebut menjadi produk nyata.",
+      icon: <Code2 className="w-10 h-10 text-white" strokeWidth={1.5} />,
     },
     {
-      title: "Konsultasi Web",
+      title: "Deliver",
       description:
-        "Dapatkan panduan strategis tentang struktur website, teknologi, dan performa untuk memaksimalkan potensi digital bisnis Anda.",
-      image: "/images/service3.jpg",
-      alt: "Konsultasi pembuatan website untuk bisnis - BeMalo digital agency",
+        "Menyampaikan hasil akhir kepada pengguna agar bisa digunakan dan memberi manfaat.",
+      icon: <Users className="w-10 h-10 text-white" strokeWidth={1.5} />,
     },
   ];
 
   return (
     <section
-      id="services"
-      aria-label="Layanan Jasa Web BeMalo"
-      className="bg-background py-32"
+      id="how-it-works"
+      aria-label="Cara Kerja Kami BeMalo"
+      className="bg-white py-24 px-4 sm:px-6 lg:px-12"
     >
-      <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
-        <div className="mb-12 text-center">
-          <motion.p
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-            className="mb-4 font-semibold text-primary md:text-lg"
-          >
-            LAYANAN KAMI
-          </motion.p>
+      <div className="mx-auto max-w-7xl bg-[#0a0a0a] rounded-[2.5rem] p-8 md:p-16 lg:p-20 relative overflow-hidden shadow-2xl">
+        {/* Subtle gradient background on the right */}
+        <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-red-950/40 to-transparent pointer-events-none rounded-r-[2.5rem]"></div>
+
+        <div className="relative z-10 text-center mb-16">
           <motion.h2
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.2 }}
-            className="mb-6 font-bold text-foreground text-3xl md:text-5xl"
+            transition={{ duration: 0.6 }}
+            className="mb-4 font-bold text-white text-4xl md:text-5xl lg:text-[64px]"
           >
-            Jasa Bikin Website
-            <br />
-            <span>untuk Bisnis Anda</span>
+            Cara Kerja Kami
           </motion.h2>
-          <motion.p
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            transition={{ duration: 0.6, delay: 0.3 }}
-            className="mx-auto max-w-2xl text-muted-foreground text-lg"
+            transition={{ duration: 0.6, delay: 0.2 }}
+            className="text-white text-lg md:text-xl font-medium"
           >
-            Kami menyediakan jasa pembuatan website lengkap mulai dari desain
-            hingga development. Solusi digital terbaik untuk UMKM di seluruh
-            Indonesia.
-          </motion.p>
+            <p>Design. Develop. Deliver</p>
+            <p>Grow with Purpose</p>
+          </motion.div>
         </div>
 
-        <div className="gap-8 grid md:grid-cols-2 lg:grid-cols-3">
-          {services.map((service, index) => (
+        <div className="relative z-10 grid grid-cols-1 md:grid-cols-3 gap-6">
+          {steps.map((step, index) => (
             <motion.div
               key={index}
               initial={{ opacity: 0, y: 30 }}
               whileInView={{ opacity: 1, y: 0 }}
               viewport={{ once: true }}
               transition={{ duration: 0.5, delay: index * 0.1 }}
-              whileHover={{ y: -8, transition: { duration: 0.3 } }}
+              className="border-2 border-white rounded-[3rem] p-6 lg:p-8 flex flex-row items-center gap-6 bg-black/20 backdrop-blur-sm"
             >
-              <Card className="group bg-card bg-white shadow-lg hover:shadow-2xl border-none rounded-2xl h-full overflow-hidden transition-shadow duration-300 cursor-pointer service-card">
-                <div className="relative overflow-hidden">
-                  <img
-                    src={service.image}
-                    alt={service.alt}
-                    className="w-full h-48 object-cover group-hover:scale-110 transition-transform duration-500"
-                  />
-                </div>
-                <CardContent className="p-6">
-                  <h3 className="mb-3 font-semibold text-background text-lg md:text-xl">
-                    {service.title}
-                  </h3>
-                  <p className="text-background leading-relaxed">
-                    {service.description}
-                  </p>
-                </CardContent>
-              </Card>
+              <div className="flex-shrink-0">{step.icon}</div>
+              <div className="flex flex-col text-left">
+                <h3 className="font-bold text-white text-xl mb-1">
+                  {step.title}
+                </h3>
+                <p className="text-white/80 text-sm leading-snug">
+                  {step.description}
+                </p>
+              </div>
             </motion.div>
           ))}
         </div>

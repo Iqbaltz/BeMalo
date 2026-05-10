@@ -5,6 +5,7 @@ import HeroSection from "./components/hero-section";
 import Navigation from "./components/navigation";
 import PortfolioSection from "./components/portfolio-section";
 import ServicesSection from "./components/services-section";
+import TestimonialsSection from "./components/testimonials-section";
 import VisionSection from "./components/vision-section";
 
 export default function Home() {
@@ -16,6 +17,7 @@ export default function Home() {
       <ServicesSection />
       <ContactForm />
       <PortfolioSection />
+      <TestimonialsSection />
       <BlogsSection />
       <Footer />
     </main>

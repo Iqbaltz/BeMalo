@@ -8,6 +8,7 @@ import {
   CardHeader,
 } from "@/app/components/ui/card";
 import { BlogPost } from "@/lib/blog-data";
+import { formatDate } from "@/lib/utils";
 import { motion } from "framer-motion";
 import { Calendar, User } from "lucide-react";
 
@@ -44,7 +45,7 @@ export default function BlogCard({ post, index }: BlogCardProps) {
             <div className="flex items-center gap-4 mb-2 text-muted-foreground text-xs">
               <div className="flex items-center gap-1">
                 <Calendar className="w-3 h-3" />
-                <span>{post.date}</span>
+                <span>{formatDate(post.date)}</span>
               </div>
               <div className="flex items-center gap-1">
                 <User className="w-3 h-3" />
