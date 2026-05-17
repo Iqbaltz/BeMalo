@@ -8,16 +8,16 @@ import {
 
 export default function TestimonialsSection() {
   const opinions = [
-    { name: "Iqbal" },
-    { name: "Candra" },
-    { name: "Mia" },
-    { name: "Eva" },
-    { name: "Yansen" },
-    { name: "Yuda" },
+    { name: "Iqbal", icon: "Iqbal" },
+    { name: "Candra", icon: "Candras" },
+    { name: "Mia", icon: "Mia" },
+    { name: "Eva", icon: "Vina" },
+    { name: "Yansen", icon: "Jansen" },
+    { name: "Yuda", icon: "Yudha" },
   ];
 
   return (
-    <section className="bg-white py-24 sm:py-32">
+    <section className="bg-white py-24 sm:pt-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-12 max-w-7xl">
         <div className="text-center mb-16">
           <motion.p
@@ -55,7 +55,7 @@ export default function TestimonialsSection() {
                 <div className="rounded-full p-1 bg-white">
                   <Avatar className="w-14 h-14 border border-gray-200">
                     <AvatarImage
-                      src={`https://api.dicebear.com/7.x/micah/svg?seed=${item.name}&backgroundColor=e2e8f0`}
+                      src={`https://api.dicebear.com/7.x/notionists/svg?seed=${item.icon}&backgroundColor=e2e8f0`}
                       alt={item.name}
                     />
                     <AvatarFallback>{item.name.charAt(0)}</AvatarFallback>
@@ -76,8 +76,12 @@ export default function TestimonialsSection() {
                 </div>
 
                 <div className="relative z-10 flex justify-between items-end mt-auto text-white/50">
-                  <div className="flex font-bold text-lg tracking-tighter opacity-30">
-                    <span className="lowercase">bm</span>
+                  <div className="flex font-bold text-lg tracking-tighter">
+                    <img
+                      src="/images/bm-outline.svg"
+                      className="-ml-3 -mb-3 w-16"
+                      alt="bemalo-icon"
+                    />
                   </div>
                   <span className="text-white font-medium text-sm">
                     {item.name}

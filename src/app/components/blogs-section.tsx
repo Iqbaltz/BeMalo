@@ -5,7 +5,7 @@ import BlogCard from "./blog-card";
 
 export default function BlogsSection() {
   return (
-    <section className="bg-white py-32">
+    <section className="bg-white py-24 sm:pb-32">
       <div className="mx-auto px-4 sm:px-6 lg:px-8 max-w-7xl">
         <div className="mb-12">
           <motion.h2
